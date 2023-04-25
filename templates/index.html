@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sci-Fi Character Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <label for="character-select">Choose a character:</label>
+            <select id="character-select">
+                <option value="jenkins">Jenkins</option>
+                <option value="genly_ai">Genly Ai</option>
+                <option value="margorie_prime">Margorie Prime</option>
+            </select>
+        </div>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn">Send</button>
+        </div>
+        <div class="tips">
+            <h3>Suggestions</h3>
+            <ul>
+                <li>Ask open-ended questions to engage the characters in deeper conversations.</li>
+                <li>Remember that each character has their own unique personality and background, so try asking them questions related to their specific story.</li>
+                <li>If a character's response is unclear or not what you expected, try rephrasing your question or providing more context.</li>
+                <li>Feel free to ask the characters about their opinions on various topics within their story or universe.</li>
+                <li>Be patient if the character takes a moment to respond; they might be contemplating your question.</li>
+                <li>Keep the conversation on-topic to ensure the most accurate and relevant responses from the characters.</li>
+                <li>Be creative and explore different conversation topics with each character to learn more about their personality, motivations, and experiences.</li>
+                <li>If you're unsure what to ask, start by asking the characters about their background, relationships, or their role in the story.</li>
+            </ul>
+        </div>
+        <div class="analysis-container">
+            <h2>Analysis</h2>
+            <p>
+                lorum ipsum...
+            </p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    
+</body>
+</html>
