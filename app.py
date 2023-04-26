@@ -2,6 +2,7 @@
 import openai
 import os
 import json
+import time
 from dotenv import load_dotenv
 from flask import Flask, render_template, request, jsonify
 
@@ -38,7 +39,7 @@ def generate_response(character, character_info, chat_history):
 
     print(prompt)
     # Call the OpenAI API
-    response = openai.Completion.create(
+    """ response = openai.Completion.create(
         engine="text-davinci-003",
         prompt=prompt,
         max_tokens=100,
@@ -46,10 +47,12 @@ def generate_response(character, character_info, chat_history):
         stop=None,
         temperature=0.8,
         top_p=1
-    )
+    )  """
 
     # Extract the generated text from the response
-    character_response = response.choices[0].text.strip()
+    #character_response = response.choices[0].text.strip()
+    character_response = "test"
+    #time.sleep(2)
 
     return character_response
 

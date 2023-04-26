@@ -8,23 +8,47 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <label for="character-select">Choose a character:</label>
-            <select id="character-select">
-                <option value="jenkins">Jenkins</option>
-                <option value="genly_ai">Genly Ai</option>
-                <option value="margorie_prime">Margorie Prime</option>
-            </select>
+        <div class="title-container">
+            <h1 class="page-title">Sci-Fi Character Chat</h1>
+            <div class="page-subtitle">
+                <p>Created by: Douglas Maxwell</p>
+                <p><i>ENGL 411</i> - Science Fiction</p>
+            </div>
         </div>
-        <div class="chat-box" id="chat-box"></div>
+        <div class="header">
+            <div class="character-info">
+                <div class="book-cover-container">
+                    <img src="" alt="Book Cover" class="book-cover" id="book-cover">
+                </div>
+                <div>
+                    <h3 id="character-name"></h3>
+                    <p id="character-book"></p>
+                </div>
+            </div>
+            <div class="character-select-container">
+                <label for="character-select">Choose a character: </label>
+                <select id="character-select">
+                    <option value="jenkins">Jenkins</option>
+                    <option value="genly_ai">Genly Ai</option>
+                    <option value="margorie_prime">Margorie Prime</option>
+                    <option value="kirsten">Kirsten</option>
+                </select>
+            </div>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <div id="messages-container"></div>
+            <div class="loading-spinner" id="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+            </div>
+        </div>
         <div class="chat-input">
             <input type="text" id="user-input" placeholder="Type your message...">
             <button id="send-btn">Send</button>
         </div>
+        
         <div class="tips">
             <h3>Suggestions</h3>
             <ul>
-                <li>Ask open-ended questions to engage the characters in deeper conversations.</li>
                 <li>Remember that each character has their own unique personality and background, so try asking them questions related to their specific story.</li>
                 <li>If a character's response is unclear or not what you expected, try rephrasing your question or providing more context.</li>
                 <li>Feel free to ask the characters about their opinions on various topics within their story or universe.</li>

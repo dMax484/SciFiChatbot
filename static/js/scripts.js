@@ -1,19 +1,27 @@
 const chatHistory = [];
 const characterContext = {
-    jenkins: {name: "Jenkins", book: "City by Clifford Simak"},
+    jenkins: {name: "Jenkins", book: "City by Clifford Simak", image: "city_cover.jpg"},
     genly_ai: {name: "Genly Ai", book: "The Left Hand of Darkness by Usula K. Le Guin"},
     margorie_prime: {name: "Margorie Prime", book: "Margorie Prime by Jordan Harrison"},
     kirsten: {name: "Kirsten", book: "Station Eleven by Emily St. John Mandel"}
 };
 
+// Before fetching character response, show spinner
+const loadingSpinner = document.getElementById("loading-spinner");
+
+// initialize character info
+updateCharacterInfo();
+
 document.getElementById("send-btn").addEventListener("click", async function() {
+    loadingSpinner.style.display = "flex";
     const characterSelect = document.getElementById("character-select");
     const userInput = document.getElementById("user-input");
     const chatBox = document.getElementById("chat-box");
+    const messagesContainer = document.getElementById("messages-container");
 
     const characterVal = characterSelect.value;
     const characterInfo = characterContext[characterVal];
-    character = characterInfo['name'];
+    const character = characterInfo['name'];
     const userMessage = userInput.value.trim();
 
     if (userMessage.length === 0) return;
@@ -30,7 +38,7 @@ document.getElementById("send-btn").addEventListener("click", async function() {
     const userMessageElement = document.createElement("div");
     userMessageElement.className = "message";
     userMessageElement.textContent = `You: ${userMessage}`;
-    chatBox.appendChild(userMessageElement);
+    messagesContainer.appendChild(userMessageElement);
 
     // Fetch character response
     const requestBody = new FormData();
@@ -42,6 +50,10 @@ document.getElementById("send-btn").addEventListener("click", async function() {
         method: "POST",
         body: requestBody
     });
+
+    // After receiving the response, hide spinner
+    loadingSpinner.style.display = "none";
+
     const jsonResponse = await response.json();
     const characterMessage = jsonResponse.response;
 
@@ -49,7 +61,7 @@ document.getElementById("send-btn").addEventListener("click", async function() {
     const characterMessageElement = document.createElement("div");
     characterMessageElement.className = "message";
     characterMessageElement.textContent = `${character}: ${characterMessage}`;
-    chatBox.appendChild(characterMessageElement);
+    messagesContainer.appendChild(characterMessageElement);
 
     // Add character chat to history
     chatHistory.push({ role: character, message: characterMessage });
@@ -72,10 +84,25 @@ document.getElementById("user-input").addEventListener("keydown", function(event
 // Listen for changes in character select
 document.getElementById("character-select").addEventListener("change", function() {
     clearChatData();
+    updateCharacterInfo();
 });
 
+function updateCharacterInfo() {
+    const characterSelect = document.getElementById("character-select");
+    const characterVal = characterSelect.value;
+    const characterNameElement = document.getElementById("character-name");
+    const characterBookElement = document.getElementById("character-book");
+    const characterImageElement  = document.getElementById("book-cover");
+
+    
+    const characterInfo = characterContext[characterVal];
+    characterNameElement.textContent = characterInfo.name;
+    characterBookElement.textContent = characterInfo.book;
+    characterImageElement.src = "/static/assets/" + characterInfo.image;
+}
+
 function clearChatData() {
-    const chatBox = document.getElementById("chat-box");
-    chatBox.innerHTML = "";
+    const messagesContainer = document.getElementById("messages-container");
+    messagesContainer.innerHTML = "";
     chatHistory.length = 0;
 }
