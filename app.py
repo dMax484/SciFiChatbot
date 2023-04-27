@@ -30,8 +30,9 @@ def chat():
 
 def generate_response(character, character_info, chat_history):
     # Prepare the prompt for the OpenAI API
-    prompt = f"User is having a conversation with {character}. {character} is from the novel {character_info['book']}. The character should respond in a manner consistent with their personality and background.\n\n"
+    prompt = f"User is having a conversation with {character}. {character} is from the novel {character_info['book']}.\nHere is some info about the character: {character_info['description']}\nThe character should respond in a manner consistent with their personality and background. Respond using only the tone, manner and vocabulary of the given character.\n\n"
 
+    print(prompt)
     for message in chat_history:
         prompt += f"{message['role']}: {message['message']}\n"
 
@@ -39,7 +40,7 @@ def generate_response(character, character_info, chat_history):
 
     print(prompt)
     # Call the OpenAI API
-    """ response = openai.Completion.create(
+    response = openai.Completion.create(
         engine="text-davinci-003",
         prompt=prompt,
         max_tokens=100,
@@ -47,11 +48,11 @@ def generate_response(character, character_info, chat_history):
         stop=None,
         temperature=0.8,
         top_p=1
-    )  """
+    ) 
 
     # Extract the generated text from the response
-    #character_response = response.choices[0].text.strip()
-    character_response = "test"
+    character_response = response.choices[0].text.strip()
+    #character_response = "test"
     #time.sleep(2)
 
     return character_response

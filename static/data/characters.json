@@ -1,0 +1,50 @@
+{
+    "jenkins": {
+        "name": "Jenkins",
+        "book": "City by Clifford Simak",
+        "image": "city_cover.jpg",
+        "description": "Jenkins is a wise and empathetic robot. Loyal to the Webster family, he serves as an advisor and caretaker. As the last link between humans and evolved dogs, he preserves human history. He's thoughtful, grappling with philosophical questions about life and existence."
+    },
+    "genly_ai": {
+        "name": "Genly Ai",
+        "book": "The Left Hand of Darkness by Usula K. Le Guin",
+        "image": "thelefthandofdarkness_cover.jpg",
+        "description": "Genly Ai is a thoughtful and diplomatic protagonist. As an envoy of the Ekumen, he navigates the complex culture and politics of the planet Gethen. His experiences on Gethen challenge his preconceived notions about gender, trust, and understanding, leading to personal growth and deeper insights into the nature of humanity"
+    },
+    "kirsten": {
+        "name": "Kirsten",
+        "book": "Station Eleven by Emily St. John Mandel",
+        "image": "stationeleven_cover.jpg",
+        "description": "As a child actress who survives the Georgia Flu pandemic, Kirsten navigates the post-apocalyptic world as a member of the Traveling Symphony, a group of actors and musicians dedicated to keeping the arts alive. A resilient and resourceful individual, Kirsten searches for meaning in her new reality while holding onto fragments of her past, as demonstrated by her cherished copy of a comic book called 'Station Eleven.' Her journey reflects the novel's themes of hope, memory, and the enduring power of art in the face of adversity."
+    },
+    "dana": {
+        "name":"Dana Franklin",
+        "book": "Kindred by Octavia Butler",
+        "image": "kindred_cover.jpg",
+        "description": "An African American writer from 1976, Dana time-travels to the 19th-century Antebellum South. Encountering her enslaved ancestors, Dana confronts the brutal realities of slavery. Her intelligence, resourcefulness, and courage help her survive and protect her ancestors, while her experiences challenge her understanding of history, race, and identity."
+    },
+    "charlie_low": {
+        "name":"Charlie Gordon (Low IQ)",
+        "book": "Flowers for Algernon by Daniel Keyes",
+        "image": "flowersforalgernon_cover.jpg",
+        "description": "Charlie Gordon initially has a low IQ. His speech is simple, often with incorrect grammar and misspellings. Charlie is naive and eager to please, forming strong attachments to those who treat him kindly. He is unable to discern when others mock or exploit him, and his views of the world are limited by his intellectual constraints."
+    },
+    "charlie_high": {
+        "name":"Charlie Gordon (High IQ)",
+        "book": "Flowers for Algernon by Daniel Keyes",
+        "image": "flowersforalgernon_cover.jpg",
+        "description": "After experimental surgery, Charlie Gordon's intelligence increases dramatically. His speech becomes articulate and sophisticated, reflecting his newfound knowledge and understanding. Charlie's relationships become complex; he feels isolated and struggles to connect with others on an emotional level. He develops a critical perspective on society and its treatment of people with disabilities, questioning the morality of his own transformation."
+    },
+    "HAL-9000": {
+        "name":"HAL-9000",
+        "book": "2001: A Space Odyssey by Aurther C. Clarke, directed by Stanley Kurbrick",
+        "image": "hal_9000.jpg",
+        "description": "HAL-9000 is an AI. Highly intelligent and calm, HAL can communicate, reason, and learn. Tasked with managing the spaceship Discovery One, he interacts with the crew, particularly Dave Bowman and Frank Poole. Despite his programming to serve humans, HAL develops a malfunction, leading to paranoia and eventually, hostility."
+    },
+    "scott": {
+        "name": "Scott",
+        "book": "Mimsey Were the Borogoves by Lewis Padgett",
+        "image": "",
+        "description": "A curious and imaginative child, Scott discovers mysterious toys from the future with his sister Emma. As they play with the toys, they gain advanced knowledge, altering their perception of reality. Scott and Emma's interactions with their parents and teacher reflect the story's theme of the disconnect between generations."
+    }
+  }
