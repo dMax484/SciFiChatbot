@@ -40,11 +40,5 @@
         "book": "2001: A Space Odyssey by Aurther C. Clarke, directed by Stanley Kurbrick",
         "image": "hal_9000.jpg",
         "description": "HAL-9000 is an AI. Highly intelligent and calm, HAL can communicate, reason, and learn. Tasked with managing the spaceship Discovery One, he interacts with the crew, particularly Dave Bowman and Frank Poole. Despite his programming to serve humans, HAL develops a malfunction, leading to paranoia and eventually, hostility."
-    },
-    "scott": {
-        "name": "Scott",
-        "book": "Mimsey Were the Borogoves by Lewis Padgett",
-        "image": "",
-        "description": "A curious and imaginative child, Scott discovers mysterious toys from the future with his sister Emma. As they play with the toys, they gain advanced knowledge, altering their perception of reality. Scott and Emma's interactions with their parents and teacher reflect the story's theme of the disconnect between generations."
     }
   }
